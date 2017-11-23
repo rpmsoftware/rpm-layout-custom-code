@@ -10,9 +10,9 @@ This file contains functions to be used with “Normal Tables”, meaning tables
 2. Rest of rows are data 
 3. No merged cells (i.e. `colspan`, `rowspan`)
 
-Available functions:
+### Available functions:
 
-### `rpm_table_sortDateColumn(columnTitle, descending)`
+#### `rpm_table_sortDateColumn(columnTitle, descending)`
 
 Sorts a table by certain column that contains valid date values, example:
 
