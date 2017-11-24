@@ -55,9 +55,9 @@ The `$$(selector)` function returns a list of elements that match certain `selec
 2. `$$(span)` - will return a list of every `span` element
 3. `$$(span.something)` - will return a list of every `span` that has the `something` class.
 
-### The `getElements` function
+### The `getElements` and `getElement` function
 
-When you need to find an element inside of another element  you can use the `getElemnts` function.
+When you need to find an element inside of another element  you can use the `getElements` function (or if you're only interested in the first one `getElement`).
 
 Example:
 
@@ -76,3 +76,4 @@ var notes = someElement.getElements('.Note');
 ```
 
 In the previous example, the `notes` variable will contains references to the elements that say `Note 1`, `Note 2` and `Note 3` (but not to the one that says `Some other note`).
+
