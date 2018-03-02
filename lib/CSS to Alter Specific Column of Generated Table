@@ -1,0 +1,22 @@
+Wrap a class around the table that contains the column
+
+class="field-value FLHA_HazardAssessment"
+
+Example...
+  <td style="border:0" class="field-value FLHA_HazardAssessment">
+    [Hazard Assessment]
+  </td>
+
+Example...
+<div class="field-value FLHA_HazardAssessment">
+  [Hazard Assessment]
+</div>
+
+
+
+In the Stylesheet identify the column to be affected and define the properties to be overridden
+
+.FLHA_HazardAssessment td.TableBuilder--table-cell:nth-child(2) {
+	width: 100px;
+}
+
