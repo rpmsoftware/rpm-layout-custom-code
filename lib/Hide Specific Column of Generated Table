@@ -1,0 +1,43 @@
+Wrap table in question with div tag.
+Add Java script that references the div tag.
+Snippet taken from Premier Directional Drilling --> Service Damage Request
+
+<div class="SDR_damages">
+  [Damages]
+</div>
+
+<script>
+        (function() {
+        function removeTableColumnInside(containerSelector, columnNumber) {
+        var containers = document.body.getElements(containerSelector);
+        if (containers.length === 0) {
+        return removeTableColumnInside.delay(400, this, [containerSelector, columnNumber]);
+        }
+        var tablesRendered = true;
+        var tables = containers.map(function(container) {
+        var table = container.getElement('table');
+        if (table === null) {
+        tablesRendered = false;
+        }
+        return table;
+        });
+        if (!tablesRendered) {
+        return removeTableColumnInside.delay(400, this, [containerSelector, columnNumber]);
+        }
+        console.log(tables); 
+        tables.each(function(table){
+        removeTableColumn(table, columnNumber);
+        });
+        }
+
+        function removeTableColumn(table, columnNumber) {
+        table.getElements('tr').filter(function(row) {
+        row.getChildren()[columnNumber-1].hide();
+        });
+        }
+
+       removeTableColumnInside('.SDR_damages', 4);
+       removeTableColumnInside('.SDR_damages', 6);
+
+        })();
+</script> 
