@@ -1,0 +1,35 @@
+<script>(function() {
+	function removeBottomLinks() {
+		var links=document.body.getElements('.rpm-ui--links-footer');
+		if (links.length===0) {
+			return removeBottomLinks.delay(400);
+		}
+		links.destroy();
+	}
+	removeBottomLinks();
+}
+
+)();
+</script>
+
+
+
+Below is a second version that is never supposed to hit the delay
+
+
+<script>
+(function() {
+function removeBottomLinks() {
+var links = document.body.getElements('.rpm-ui--links-footer');
+if (links.length === 0) {
+return removeBottomLinks.delay(400);
+}
+links.destroy();
+}
+
+$$('body').addEvent('RpmLayoutRendered', function() {
+	removeBottomLinks();
+});
+
+})();
+</script>
