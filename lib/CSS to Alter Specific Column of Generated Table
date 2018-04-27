@@ -20,3 +20,7 @@ In the Stylesheet identify the column to be affected and define the properties t
 	width: 100px;
 }
 
+.FLHA_HazardAssessment td.TableBuilder--table-cell:nth-child(2) {
+	width: 100px !Important;
+}
+
