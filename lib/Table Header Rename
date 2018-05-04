@@ -1,0 +1,49 @@
+Renames the Header names of a table.
+
+
+Place the following code around the table in the layout.
+In this example a header name of "Hours."  will be replaced with "Hours".  Expects a delimiter of ";;"
+
+<div class="header-rename" data-search="Hours.;;Rate.;;Amount." data-replace="Hours;;Rate;;Amount">
+[Equipment & Labour]
+</div>
+
+
+This code goes in the layout at the bottom of the layout.
+<script>
+
+    function waitForTables(callback) {
+        var allFound = true;
+        $$('.header-rename').each(function(container) {
+            var headers = container.getElements('.TableBuilder--table-header');
+            if (headers.length === 0) {
+                allFound = false;
+            }
+        });
+        if (allFound) {
+            callback();
+        } else {
+            waitForTables.delay(500, this, [callback]);
+        }
+    }
+    
+    function doReplacements() {
+        $$('.header-rename').each(function(container) {
+            var searches = container.get('data-search').split(';;');
+            var replace = container.get('data-replace').split(';;');
+            var headers = container.getElements('.TableBuilder--table-header');
+            // debugger;
+            headers.each(function(header) {
+                var headerText = header.get('text').trim();
+                var index = searches.indexOf(headerText);
+                if (index === -1) {
+                    return;
+                }
+                header.set('text', replace[index]);
+            });
+        });
+    }
+    $$('body').addEvent('RpmLayoutRendered', function() {
+        waitForTables(doReplacements);
+    });
+</script>
