@@ -1,0 +1,91 @@
+Still a work in progress.  The solution is not complete yet but did not want to throw out the solution yet.
+
+Combines two tables into one table, where the key of table one matches the key of table two.
+
+Equipment
+Layout
+
+<script>
+
+function extractTableData(table, keyColumn) {
+   var rows = table.getElements('.TableBuilder--table-row');
+   var headers = rows.shift().getChildren().map(function(header) {
+       return header.get('text').trim();
+   });
+   var headerIndex = headers.indexOf(keyColumn);
+   var rowsObject = {};
+   rows.each(function(row) {
+       var content = {};
+       var key = '';
+       row.getChildren().each(function(cell, i) {
+           if (i === headerIndex) {
+               key = cell.get('text').trim();
+               return;
+           }
+           var header = headers[i];
+           if (header === '') {
+               return;
+           }
+           content[header] = cell.clone();
+       });
+       if (rowsObject[key] === undefined) {
+           rowsObject[key] = [];
+       }
+       rowsObject[key].push(content);
+   });
+   
+   return rowsObject;
+}
+
+function mergeDataIntoTable(targetTable, keyColumn, data, headers) {
+    var rows = targetTable.getElements('.TableBuilder--table-row');
+    var headerRow = rows.shift();
+    var targetHeaders = headerRow.getChildren().map(function(header) {
+       return header.get('text').trim();
+   });
+
+   var headerTpl = headerRow.getChildren()[0];
+   headerRow.adopt(headers.map(function(header) {
+       var headerEl = headerTpl.clone();
+       headerEl.set('text', header);
+       return headerEl;
+   }));
+   
+   var headerIndex = targetHeaders.indexOf(keyColumn);
+   rows.each(function(row) {
+       var cells = row.getChildren();
+       var key = cells[headerIndex].get('text').trim();
+       var dataToMerge = data[key];
+       if (dataToMerge === undefined){
+           dataToMerge = {};
+           headers.each(function(header) {
+               dataToMerge[header] = cells.getLast().clone().empty();
+           });
+           dataToMerge = [dataToMerge];
+       }
+       dataToMerge = dataToMerge.shift();
+       var cellsToMerge = headers.map(function(header) {
+            return dataToMerge[header];
+        });
+       row.adopt(cellsToMerge);
+   });
+}
+
+function waitForTable() {
+    var table = $('LabourTable').getElement('table');
+    var targetTable = $('EquipmentTable').getElement('table');
+    if (table && targetTable) {
+        var dataToMerge = extractTableData(table, 'Unit #');
+        mergeDataIntoTable(targetTable, 'Unit #', dataToMerge, ['Employee', 'Hours', 'Rate', 'Amount']);
+        
+        table.getParent('.table-container').hide();
+        return;
+    }
+    waitForTable.delay(500);
+}
+
+$$('body').addEvent('RpmLayoutRendered', function() {
+    waitForTable();
+});
+
+</script>
