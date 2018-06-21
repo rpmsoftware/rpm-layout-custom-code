@@ -1,0 +1,25 @@
+Give YNL field a class for example "YNL1" in the layout. The below example is from a YNL field in a Table. You may need to put the YNL field in a div. 
+
+<tr>
+    <td class="field-name YNL1" colspan="4">Type of Contact or Near Contact with Energy or Substance <br> [Type of Contact or Near Contact with Energy or Substance]</td>
+</tr>
+
+On the style sheet:
+
+This is to set the width of the first column. 
+
+.YNL1 .YesNoList--field-column {
+	width:200px;
+}
+
+This is to set the width of the second column. 
+
+.YNL1 .YesNoList--yes-column div, .YNL1 .YesNoList--no-column div, .YNL1 .YesNoList--na-column div, .YNL1 .YesNoList--option-value {
+	width:40px;
+}
+
+There is a default min on the last column which is set to 40% so this needs to be changed. 70% seems to work. 
+
+.YesNoList--comment-column {
+	width:70%;
+}
