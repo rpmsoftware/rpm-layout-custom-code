@@ -12,9 +12,8 @@ Example...
   [Hazard Assessment]
 </div>
 
-
-
 In the Stylesheet identify the column to be affected and define the properties to be overridden
+
 
 .FLHA_HazardAssessment td.TableBuilder--table-cell:nth-child(2) {
 	width: 100px;
@@ -24,3 +23,26 @@ In the Stylesheet identify the column to be affected and define the properties t
 	width: 100px !Important;
 }
 
+Example#2
+
+	<div class="parameters">
+		[Parameters]
+	</div>
+	
+Then on style sheet, the .parameter .TableBuilder--table defines that the table should table the widths as described. The "table-layout auto" will fill in what is not defined. 
+
+.parameters .TableBuilder--table {
+	table-layout:auto;
+}
+
+.parameters td.TableBuilder--table-cell:nth-child(2) {
+	width: 60px;
+}
+
+.parameters td.TableBuilder--table-cell:nth-child(3) {
+	width: 60px;
+}
+
+.parameters td.TableBuilder--table-cell:nth-child(4) {
+	width: 60px;
+}
