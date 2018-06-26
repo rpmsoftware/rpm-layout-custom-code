@@ -12,7 +12,7 @@ This file contains functions to be used with “Normal Tables”, meaning tables
 
 ### Available functions:
 
-#### `rpm_table_sortDateColumn(columnTitle, descending)`
+#### `rpm_table_sortDateColumn(columnTitle, descending, invalidAtBottom)`
 
 Sorts a table by certain column that contains valid date values, example:
 
@@ -24,6 +24,12 @@ aTableElement.rpm_table_sortDateColumn('Modified', false);
 
 // Sort aTableElement by the "User Birthday" column descending
 aTableElement.rpm_table_sortDateColumn('User Birthday', true);
+
+// Sort aTableElement by the "User Birthday" column descending and leave users without birth day at the bottom of the table
+aTableElement.rpm_table_sortDateColumn('User Birthday', true, true);
+
+// Sort aTableElement by the "User Birthday" column descending and leave users without birth day at the top of the table
+aTableElement.rpm_table_sortDateColumn('User Birthday', true, false);
 ```
 
 ## FakeTables.js
