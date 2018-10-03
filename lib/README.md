@@ -82,3 +82,49 @@ For example, if you have this html:
 If you call `table.rpm_fakeTable_removeEmptyTable(false)` then the `<h3>` will be kept.
 
 If you pass true like this `table.rpm_fakeTable_removeEmptyTable(true)`, then the `<div class="whatever">` and all of its content will be removed.
+
+
+## Sorting.js
+
+This file contains functions to be used for sorting elements inside a container, e.g.:
+
+```html
+<div class="the-container">
+    <div class="item-to-sort">
+        ...
+    </div>
+    <div class="item-to-sort">
+        ...
+    </div>
+    ...
+</div>
+```
+
+### Available functions:
+
+#### `rpm_sort_byDate(dateSelector, descending)`
+
+Sorts a items that all have certain element containing a date:
+
+```html
+<div class="the-container">
+    <div class="item-to-sort">
+        ...
+        <span class="the-date-to-use-for-sorting">[A date]</span>
+        ...
+    </div>
+    <div class="item-to-sort">
+        ...
+        <span class="the-date-to-use-for-sorting">[A date]</span>
+        ...
+    </div>
+    ...
+</div>
+````
+
+```js
+var container = $$('.the-container')[0];
+
+// Sort the 'item-to-sort' elements ascending based on the 'the-date-to-use-for-sorting' inside each one:
+container.rpm_sort_byDate('.the-date-to-use-for-sorting', true)
+```
