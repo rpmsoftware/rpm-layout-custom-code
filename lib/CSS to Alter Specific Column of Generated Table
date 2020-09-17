@@ -46,3 +46,37 @@ Then on style sheet, the .parameter .TableBuilder--table defines that the table 
 .parameters td.TableBuilder--table-cell:nth-child(4) {
 	width: 60px;
 }
+
+*/ some new things to add to RPM generated tables to manipulate them...
+
+.TableBuilder--table th {
+padding:0.1rem;
+}
+
+This will shorten the table header padding
+
+.TableBuilder--table td {
+padding:0.1rem;
+}
+
+This will shorten the table column padding
+
+.TableCell--input-container {
+line-height:1.3rem;
+}
+
+This will shorten the line height for tables, essentially the padding. 
+
+*/Table fields text-align is different for different field types. If you want an individual column call to be centered...
+
+.resourcesforthejob td.TableBuilder--table-cell:nth-child(3) .TableCell--input-container{
+text-align:center;
+}
+
+*/ You can also set the width of a table cell like this...
+
+.resourcesforthejob td.TableBuilder--table-cell:nth-child(3) .TableCell--input-container{
+width: 60px;
+text-align:center;
+}
+
