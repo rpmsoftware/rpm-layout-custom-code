@@ -1,0 +1,83 @@
+/*Wrap a class around the table that contains the column
+
+class="field-value FLHA_HazardAssessment"
+
+Example...
+  <td style="border:0" class="field-value FLHA_HazardAssessment">
+    [Hazard Assessment]
+  </td>
+
+Example...
+<div class="field-value FLHA_HazardAssessment">
+  [Hazard Assessment]
+</div>
+
+In the Stylesheet identify the column to be affected and define the properties to be overridden
+
+*/
+
+.FLHA_HazardAssessment td.TableBuilder--table-cell:nth-child(2) {
+	width: 100px;
+}
+
+.FLHA_HazardAssessment td.TableBuilder--table-cell:nth-child(2) {
+	width: 100px !Important;
+}
+
+/*Example#2
+
+	<div class="parameters">
+		[Parameters]
+	</div>
+	
+Then on style sheet, the .parameter .TableBuilder--table defines that the table should table the widths as described. The "table-layout auto" will fill in what is not defined. 
+*/
+
+.parameters .TableBuilder--table {
+	table-layout:auto;
+}
+
+.parameters td.TableBuilder--table-cell:nth-child(2) {
+	width: 60px;
+}
+
+.parameters td.TableBuilder--table-cell:nth-child(3) {
+	width: 60px;
+}
+
+.parameters td.TableBuilder--table-cell:nth-child(4) {
+	width: 60px;
+}
+
+// some new things to add to RPM generated tables to manipulate them...
+
+.TableBuilder--table th {
+padding:0.1rem;
+}
+
+//This will shorten the table header padding
+
+.TableBuilder--table td {
+padding:0.1rem;
+}
+
+//This will shorten the table column padding
+
+.TableCell--input-container {
+line-height:1.3rem;
+}
+
+//This will shorten the line height for tables, essentially the padding. 
+
+//Table fields text-align is different for different field types. If you want an individual column call to be centered...
+
+.resourcesforthejob td.TableBuilder--table-cell:nth-child(3) .TableCell--input-container{
+text-align:center;
+}
+
+// You can also set the width of a table cell like this...
+
+.resourcesforthejob td.TableBuilder--table-cell:nth-child(3) .TableCell--input-container{
+width: 60px;
+text-align:center;
+}
