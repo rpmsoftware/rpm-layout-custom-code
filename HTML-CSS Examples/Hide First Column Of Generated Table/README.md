@@ -1,5 +1,7 @@
 Adding the above line of code to your style sheet will hide the first column on a generated table. 
 
+## Example
+
 Without CSS
 
 ![image](https://user-images.githubusercontent.com/87500503/171939662-7a0384b4-a0c1-4984-b0f9-c54add13e6f3.png)
