@@ -1,3 +1,5 @@
+Columns without data in the cells will be removed. 
+
 ## Example
 
 Without Script
