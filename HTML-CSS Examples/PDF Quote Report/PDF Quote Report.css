@@ -1,0 +1,196 @@
+* {
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+}
+
+
+#logo {
+ text-align: center;
+}
+
+.top-logo{
+ margin-top: -50px
+}
+
+.cover-page {
+ width:100%;
+ /*height:8.7in;*/
+ padding:1px;
+ page-break-after:always;
+}
+
+.cover-page h1 {
+ width:80%;
+ margin:200px auto 0 auto;
+ padding-bottom:10px;
+ text-align:center;
+ font-family: "Oswald";
+ font-size:48px;
+ font-weight:400;
+ color:#046D9B;
+
+}
+
+
+.cover-page p{
+ background: transparent no-repeat center;
+ color: #3E3236;
+ 
+}
+
+.cover-page hr{
+ background: transparent no-repeat center;
+ display:block !important;
+ border: 0;
+ height: 1px;
+ background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(127, 127, 127, 0.75), rgba(0, 0, 0, 0));
+}
+
+.cover-page .cover-footer {
+ font-size:10px;
+ text-align:center;
+ padding-top:5in;
+ color:black;
+}
+
+.container{
+ clear:both;
+}
+
+.left{
+ float:left;
+ height:100%;
+}
+
+.center{
+ overflow:hidden;
+ color: #899199;
+}
+
+.right {
+ position:right;
+ float:right;
+ color: #899199;
+ width: 220px;
+ margin: 5px;
+}
+
+.right2 {
+ position:right;
+ float:right;
+ color: #899199;
+ width: 220px;
+}
+
+.field-name {
+ width: 40%;
+ text-align: left;
+ padding: .5rem;
+ color: rgba(0,0,0,0.7);
+ font-size: 8pt;
+ font-family: "Open sans";
+}
+
+.field-title {
+ width: 40%;
+ text-align: center;
+ padding: .5rem;
+ color: rgba(0,0,0,0.7);
+ font-size: 10pt;
+ font-weight:bold;
+ font-family: "Open sans";
+}
+
+
+.field-name-center {
+ width: 40%;
+ text-align: center;
+ padding: .5rem;
+ color: rgba(0,0,0,0.7);
+ font-size: 8pt;
+ font-family: "Open sans";
+}
+
+.field-value {
+ text-align: center;
+ padding: .5rem;
+ font-size: 8pt;
+ font-family: "Open sans";
+}
+
+.field-value-center {
+ text-align: center;
+ padding: .5rem;
+ font-size: 8pt;
+ font-family: "Open sans";
+}
+
+.repeat{
+ margin:15px;
+}
+
+.table-container{
+overflow: hidden;
+page-break-inside:avoid;
+}
+
+.table-container-none{
+
+}
+
+.clear{
+clear:both;
+}
+
+#pagebreak {
+ page-break-after:always;
+}
+
+.img-container {
+height:75px;
+width:150px;
+}
+
+.img{
+max-height:100%;
+max-width:100px;
+}
+
+h1{
+color: #053266;
+ font-family: "Oswald";
+ font-size: 22px;
+ font-weight: bold;
+}
+
+h3{
+color: #053266;
+ font-family: "Oswald";
+ font-size: 16px;
+ font-weight: normal;
+}
+
+.table-container > div { page-break-inside:avoid; }
+/*Table { page-break-after:auto }*/
+tr { page-break-inside:avoid; page-break-after:auto }
+td { page-break-inside:avoid; page-break-after:auto }
+thead { display:table-header-group }
+tfoot { display:table-footer-group }
+
+.detail{
+
+}
+
+@page {
+margin: 20mm 0mm 0mm 0mm;
+}
+
+html{
+line-height: 1.6;
+}
+
+@media print {
+ hr { display:block; }
+ .cover-page {-webkit-print-color-adjust:exact;}
+}
