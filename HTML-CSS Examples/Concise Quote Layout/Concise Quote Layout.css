@@ -1,0 +1,192 @@
+* {
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+}
+
+.container{
+ clear:both;
+ -webkit-print-color-adjust:exact;
+}
+
+.sub{
+font-size:10px;
+text-align:left;
+}
+
+.sub2{
+font-size:12px;
+color: rgba(0,0,0,0.7);;
+}
+
+.left{
+ float:left;
+ height:100%;
+}
+
+.left-title {
+ float:left;
+ margin: 5px;
+}
+
+.center{
+ overflow:hidden;
+ color: #899199;
+}
+
+.right {
+ position:right;
+ float:right;
+ width: 220px;
+ text-align:right;
+}
+
+.right-center {
+ position:right;
+ float:right;
+ text-align:left;
+ vertical-align:middle;
+}
+
+.field-name {
+ text-align: left;
+ padding: .5rem;
+ color: rgba(0,0,0,0.7);
+ font-size: 8pt;
+
+}
+
+.field-name-head {
+ text-align: left;
+ padding: .5rem;
+ color: rgba(0,0,0,0.7);
+ font-size: 8pt;
+}
+
+.field-title {
+ text-align: left;
+ padding: .5rem;
+ color: white;
+ font-size: 10pt;
+ font-weight:bold;
+}
+
+
+.field-name-center {
+ text-align: center;
+ padding: .5rem;
+ color: rgba(0,0,0,0.7);
+ font-size: 8pt;
+}
+
+.field-value {
+ text-align: left;
+ padding: .5rem;
+ font-size: 8pt;
+}
+
+.field-value-column {
+ text-align: left;
+ padding: .5rem;
+ font-size: 8pt;
+ vertical-align: text-top;
+}
+
+.field-value-center {
+ text-align: center;
+ padding: .5rem;
+ font-size: 8pt;
+}
+
+.repeat{
+ margin:15px;
+}
+
+.table-container{
+overflow: hidden;
+page-break-inside:avoid;
+table-layout : fixed;
+}
+
+.table-container-none{
+ table-layout : fixed;
+}
+
+.clear{
+clear:both;
+}
+
+#pagebreak {
+ page-break-after:always;
+}
+
+.img-container {
+height:75px !important;
+width:150px !important;
+}
+
+.supplier {
+height:75px !important;
+width:150px !important;
+}
+
+.img{
+max-height:100%;
+max-width:100px;
+}
+
+
+h1{
+ color: #053266;
+ font-size: 28px;
+ font-weight: bold;
+ margin: 0;
+}
+
+h3{
+ color: #053266;
+ font-size: 16px;
+ font-weight: normal;
+}
+
+tr:nth-child(2n+1) td {
+ background: none;
+}
+
+.header-color{
+background:#30A9DE; -webkit-print-color-adjust:exact;
+-webkit-print-color-adjust:exact;
+}
+
+.quote-table{
+}
+
+.quote-table tr td {
+ border: 0;
+}
+
+.table-container > div { page-break-inside:avoid; }
+/*Table { page-break-after:auto }*/
+tr { page-break-inside:avoid; page-break-after:auto }
+td { page-break-inside:avoid; page-break-after:auto }
+thead { display:table-header-group }
+tfoot { display:table-footer-group }
+
+
+.detail{
+
+}
+
+@page {
+margin: 20mm 0mm 0mm 0mm;
+}
+
+html{
+line-height: 1.6;
+}
+
+@media print {
+ hr { display:block; }
+ body {-webkit-print-color-adjust:exact;}
+ .cover-page {-webkit-print-color-adjust:exact;}
+}
