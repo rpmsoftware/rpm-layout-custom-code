@@ -60,7 +60,7 @@ line-height:1.3rem;
 ![image](https://github.com/rpmsoftware/rpm-layout-custom-code/assets/87500503/004927f1-1702-4ad1-8e5d-5ff0cb0830fc)
 ___
 
-CSS below will align the text in the cell to the center for the specific column. 
+CSS below will align the text in the cell to the center for the specific column. Change a specific column by changing the `nth-child()` value.
 ```
 .parameters td.TableBuilder--table-cell:nth-child(3) .TableCell--input-container{
 text-align:center;
@@ -69,7 +69,7 @@ text-align:center;
 ![image](https://github.com/rpmsoftware/rpm-layout-custom-code/assets/87500503/4095b148-2159-4ab2-be85-be71209640bc)
 ___
 
-You can manaully adjust the width of the cell. Text can overlap to the cell next to it.
+You can manaully adjust the width of the cell. Text can overlap to the cell next to it. Change a specific column by changing the `nth-child()` value.
 ```
 .parameters td.TableBuilder--table-cell:nth-child(3) .TableCell--input-container{
 width: 60px;
