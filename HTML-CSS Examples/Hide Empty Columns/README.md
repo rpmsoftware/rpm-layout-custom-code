@@ -1,4 +1,4 @@
-Sample Javascript will remove empty rows from a table. The parameters are detemined by the `class` `field-value`.
+Sample Javascript will remove empty columns and rows from a table. The parameters are detemined by the `class` `field-value`.
 
 ## Example
 HTML example 
