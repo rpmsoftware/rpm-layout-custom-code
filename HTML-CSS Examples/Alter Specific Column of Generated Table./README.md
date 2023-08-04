@@ -69,7 +69,7 @@ text-align:center;
 ![image](https://github.com/rpmsoftware/rpm-layout-custom-code/assets/87500503/4095b148-2159-4ab2-be85-be71209640bc)
 ___
 
-You can manaully adjust the width of the cell. Text can overlap to the cell next to it. Change a specific column by changing the `nth-child()` value.
+You can manually adjust the width of the cell. Text can overlap into the cell next to it. Change a specific column by changing the `nth-child()` value.
 ```
 .parameters td.TableBuilder--table-cell:nth-child(3) .TableCell--input-container{
 width: 60px;
