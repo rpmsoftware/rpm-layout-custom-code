@@ -1,4 +1,4 @@
-Adding the above line of code to your style sheet will hide the first column on a generated table. 
+Adding the CSS code to your style sheet will hide the first column of a generated table. 
 
 ## Example
 
