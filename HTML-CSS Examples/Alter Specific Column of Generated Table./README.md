@@ -3,7 +3,7 @@ The following CSS code will allow you to adjust the columns generated in a table
 ## Examples
 ___
 
-Setting the width of a table column to the specified value. If the data in the cell exceeds the set width, the set width will be ignored. "table-layout:auto" will fill in what is not defined. Changing the nth-child value will choose the column.
+Setting the width of a table column to the specified value. If the data in the cell exceeds the set width, the set width will be ignored. `table-layout:auto` will fill in what is not defined. Changing the `nth-child()` value will choose the column.
 
 ```
 .parameters .TableBuilder--table {
