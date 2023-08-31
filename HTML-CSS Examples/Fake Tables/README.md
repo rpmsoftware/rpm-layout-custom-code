@@ -1,4 +1,4 @@
-Fake tables can be used to generate a table when using Field Groups. Using a Field Group in a table normally will result in an error. A Fake Table uses a `div` and `class` to separate headers, rows, and cells. Tables can generate in rows or columns. The CSS will be required for proper formatting of the cells and table. 
+Fake tables can be used to generate a table when using Field Groups. Using a Field Group in a table normally will result in an error. A Fake Table uses a `div` and `class` to separate headers, rows, and cells. Additional CSS will be required for proper formatting of the cells and table. 
 
 ## Example
 
