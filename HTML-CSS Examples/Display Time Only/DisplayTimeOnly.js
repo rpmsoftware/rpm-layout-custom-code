@@ -1,4 +1,3 @@
-
 <span class="only-time">[Time 'all clear given':]</span>
 
 //Add the following script to the bottom of your layout.
